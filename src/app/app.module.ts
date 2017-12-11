@@ -10,6 +10,7 @@ import { PipeNamePipe } from './pipe-name.pipe';
 import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
 import { MarketplaceComponent } from './marketplace/marketplace.component';
+import { AlbumDetailComponent } from './album-detail/album-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MarketplaceComponent } from './marketplace/marketplace.component';
     WelcomeComponent,
     PipeNamePipe,
     AboutComponent,
-    MarketplaceComponent
+    MarketplaceComponent,
+    AlbumDetailComponent
   ],
   imports: [
     BrowserModule,
