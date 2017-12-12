@@ -2,5 +2,11 @@
   <h3>{{(albumToDisplay | async).title}}</h3>
   <h4>{{(albumToDisplay | async).artist}}</h4>
   <p>{{(albumToDisplay | async).description}}</p>
-  <img src="src/assets/images/{{this.albumId}}.jpg" width=200px>
+  <img src="{{(albumToDisplay | async).albumcover}}" width=200px>
 </div>
+
+<footer class="footer">
+  <div class="container">
+    <a class="text-muted" routerLink="admin">Admin</a>
+  </div>
+</footer>
