@@ -1,6 +1,7 @@
 <div>
   <h3>{{(albumToDisplay | async).title}}</h3>
   <h4>{{(albumToDisplay | async).artist}}</h4>
+  <h4>{{(albumToDisplay | async).genre}}</h4>
   <p>{{(albumToDisplay | async).description}}</p>
   <img src="{{(albumToDisplay | async).albumcover}}" width=200px>
 </div>

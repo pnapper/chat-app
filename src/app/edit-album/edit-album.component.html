@@ -8,6 +8,15 @@
 <input [(ngModel)]="selectedAlbum.artist">
 <br>
 
+<label>New Album Genre:</label>
+  <select [(ngModel)]="selectedAlbum.genre">
+    <option value="Rock">Rock</option>
+    <option value="Pop">Pop</option>
+    <option value="Electronic">Electronic</option>
+    <option value="Jazz">Jazz</option>
+  </select>
+<br>
+
 <label>New Album Description:</label>
 <input [(ngModel)]="selectedAlbum.description">
 <br>

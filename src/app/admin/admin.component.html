@@ -17,16 +17,29 @@
       </div>
 
       <div>
+        <label>Album Genre:</label>
+        <br>
+        <select #newGenre>
+          <option value="Rock">Rock</option>
+          <option value="Pop">Pop</option>
+          <option value="Electronic">Electronic</option>
+          <option value="Jazz">Jazz</option>
+        </select>
+      </div>
+
+      <div>
         <label>Album Description:</label>
         <br>
         <textarea #newDescription></textarea>
       </div>
+
       <div>
         <label>Album Cover:</label>
         <br>
         <textarea #newalbumcover></textarea>
       </div>
-       <button (click)="submitForm(newTitle.value, newArtist.value, newDescription.value, newalbumcover.value); newTitle.value=''; newArtist.value=''; newDescription.value=''; newalbumcover.value=''">Add</button>
+
+       <button (click)="submitForm(newTitle.value, newArtist.value, newDescription.value, newalbumcover.value, newGenre.value); newTitle.value=''; newArtist.value=''; newDescription.value=''; newalbumcover.value=''; newGenre.value=''">Add</button>
     </div>
   </div>
 </div>

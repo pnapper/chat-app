@@ -1,9 +1,19 @@
 <h2>Marketplace</h2>
 
-<div *ngFor="let album of albums | async" class="panel panel-default" >
+<select (change)="onChange($event.target.value)">
+  <option value="allGenres">All Genres</option>
+  <option value="Rock">Rock</option>
+  <option value="Pop">Pop</option>
+  <option value="Electronic">Electronic</option>
+  <option value="Jazz">Jazz</option>
+</select>
+
+<div *ngFor="let album of albums | async | genre:filterByGenre " class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(album)"><em>{{album.title}}</em> by {{album.artist}}</h3>
     <div *ngIf="currentRoute === '/admin'">
+      {{album.genre}}
+      <br>
       {{album.description}}
       <br>
       {{album.albumcover}}
