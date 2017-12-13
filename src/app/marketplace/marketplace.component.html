@@ -16,9 +16,12 @@
       <br>
       {{album.description}}
       <br>
-      {{album.albumcover}}
+      <img src="{{album.albumcover}}" width=200px>
       <hr>
+      <button (click)="editFormOpen(album)">Edit</button>
+      <div *ngIf="editForm == true">
       <app-edit-album [selectedAlbum]="album"></app-edit-album>
+    </div>
     </div>
   </div>
 </div>
