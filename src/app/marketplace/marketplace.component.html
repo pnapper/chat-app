@@ -10,8 +10,9 @@
 
 <div *ngFor="let album of albums | async | genre:filterByGenre " class="panel panel-default">
   <div class="panel-body">
-    <h3 (click)="goToDetailPage(album)"><em>{{album.title}}</em> by {{album.artist}}</h3>
-    <div *ngIf="currentRoute === '/admin'">
+    <h3 (click)="goToDetailPage(album)"><img src="{{album.albumcover}}" width=75px>  <strong><em>{{album.title}}</em></strong> by {{album.artist}}
+      </h3>
+      <div *ngIf="currentRoute === '/admin'">
       {{album.genre}}
       <br>
       {{album.description}}
