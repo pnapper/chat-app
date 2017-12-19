@@ -8,18 +8,12 @@
   <option value="Jazz">Jazz</option>
 </select> -->
 
-<div *ngFor="let album of albums | async" class="panel panel-default">
-  <div class="panel-body">
-    <h3 (click)="goToDetailPage(album)"> <p>{{album.alias}}</p><strong><em>{{album.title}}</em></strong>
-      </h3>
+<div *ngFor="let album of albums | async">
+    <h5>{{album.alias}}</h5><p>{{album.title}}</p>
       <div *ngIf="currentRoute === '/admin'">
-      <br>
-      <br>
-      <hr>
-      <button (click)="editFormOpen(album)">Edit</button>
+      <!-- <button (click)="editFormOpen(album)">Edit</button>
       <div *ngIf="editForm == true">
       <app-edit-album [selectedAlbum]="album"></app-edit-album>
+    </div> -->
     </div>
-    </div>
-  </div>
 </div>
