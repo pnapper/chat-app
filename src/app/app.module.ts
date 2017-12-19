@@ -6,14 +6,11 @@ import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 
-import { MarketplaceComponent } from './marketplace/marketplace.component';
-
-
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
-import { AdminComponent } from './admin/admin.component';
+import { ChatComponent } from './chat/chat.component';
 // import { GenrePipe } from './genre.pipe';
 
 export const firebaseConfig = {
@@ -26,8 +23,7 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    MarketplaceComponent,
-    AdminComponent
+    ChatComponent
   ],
   imports: [
     BrowserModule,

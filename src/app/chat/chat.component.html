@@ -1,0 +1,40 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Chat Room</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+
+      <div>
+        <label>Enter Your Alias:</label>
+        <br>
+        <input #newAlias>
+      </div>
+
+      <div>
+        <label>Enter Message:</label>
+        <br>
+        <input #newMessage>
+      </div>
+
+
+
+       <button (click)="submitForm(newAlias.value, newMessage.value);newAlias.value=''; newMessage.value=''">Add</button>
+
+    </div>
+  </div>
+</div>
+
+<h2>Chat Log</h2>
+
+<!-- <select (change)="onChange($event.target.value)">
+  <option value="allGenres">All Genres</option>
+  <option value="Rock">Rock</option>
+  <option value="Pop">Pop</option>
+  <option value="Electronic">Electronic</option>
+  <option value="Jazz">Jazz</option>
+</select> -->
+
+<div *ngFor="let chat of chats | async">
+    <h5>{{chat.alias}}</h5><p>{{chat.message}}</p>
+</div>

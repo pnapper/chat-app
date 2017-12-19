@@ -1,16 +1,11 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MarketplaceComponent }   from './marketplace/marketplace.component';
-import { AdminComponent }   from './admin/admin.component';
+import { ChatComponent }   from './chat/chat.component';
 
 const appRoutes: Routes = [
   {
-    path: 'marketplace',
-    component: MarketplaceComponent
-  },
-  {
     path: 'chat',
-    component: AdminComponent
+    component: ChatComponent
   }
  ];
 
