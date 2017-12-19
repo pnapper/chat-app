@@ -9,7 +9,7 @@ const appRoutes: Routes = [
     component: MarketplaceComponent
   },
   {
-    path: 'admin',
+    path: 'chat',
     component: AdminComponent
   }
  ];
