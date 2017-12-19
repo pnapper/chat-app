@@ -1,23 +1,20 @@
-<h2>Marketplace</h2>
+<h2>Chat Log</h2>
 
-<select (change)="onChange($event.target.value)">
+<!-- <select (change)="onChange($event.target.value)">
   <option value="allGenres">All Genres</option>
   <option value="Rock">Rock</option>
   <option value="Pop">Pop</option>
   <option value="Electronic">Electronic</option>
   <option value="Jazz">Jazz</option>
-</select>
+</select> -->
 
 <div *ngFor="let album of albums | async | genre:filterByGenre " class="panel panel-default">
   <div class="panel-body">
-    <h3 (click)="goToDetailPage(album)"><img src="{{album.albumcover}}" width=75px>  <strong><em>{{album.title}}</em></strong> by {{album.artist}}
+    <h3 (click)="goToDetailPage(album)"> <p>{{album.alias}}</p><strong><em>{{album.title}}</em></strong>
       </h3>
       <div *ngIf="currentRoute === '/admin'">
-      {{album.genre}}
       <br>
-      {{album.description}}
       <br>
-      <img src="{{album.albumcover}}" width=200px>
       <hr>
       <button (click)="editFormOpen(album)">Edit</button>
       <div *ngIf="editForm == true">

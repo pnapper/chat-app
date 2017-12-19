@@ -1,45 +1,26 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Add New Album to Inventory</h3>
+    <h3 class="panel-title">Chat Room</h3>
   </div>
   <div class="panel-body">
     <div>
+
       <div>
-        <label>Album Title:</label>
+        <label>Enter Your Alias:</label>
+        <br>
+        <input #newAlias>
+      </div>
+
+      <div>
+        <label>Enter Message:</label>
         <br>
         <input #newTitle>
       </div>
 
-      <div>
-        <label>Album Artist:</label>
-        <br>
-        <input #newArtist>
-      </div>
 
-      <div>
-        <label>Album Genre:</label>
-        <br>
-        <select #newGenre>
-          <option value="Rock">Rock</option>
-          <option value="Pop">Pop</option>
-          <option value="Electronic">Electronic</option>
-          <option value="Jazz">Jazz</option>
-        </select>
-      </div>
 
-      <div>
-        <label>Album Description:</label>
-        <br>
-        <textarea #newDescription></textarea>
-      </div>
+       <button (click)="submitForm(newAlias.value, newTitle.value);newAlias.value=''; newTitle.value=''">Add</button>
 
-      <div>
-        <label>Album Cover:</label>
-        <br>
-        <textarea #newalbumcover></textarea>
-      </div>
-
-       <button (click)="submitForm(newTitle.value, newArtist.value, newDescription.value, newalbumcover.value, newGenre.value); newTitle.value=''; newArtist.value=''; newDescription.value=''; newalbumcover.value=''; newGenre.value=''">Add</button>
     </div>
   </div>
 </div>
