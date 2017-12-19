@@ -17,7 +17,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AdminComponent } from './admin/admin.component';
 import { EditAlbumComponent } from './edit-album/edit-album.component';
-import { GenrePipe } from './genre.pipe';
+// import { GenrePipe } from './genre.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -35,7 +35,7 @@ export const firebaseConfig = {
     AlbumDetailComponent,
     AdminComponent,
     EditAlbumComponent,
-    GenrePipe
+    // GenrePipe
   ],
   imports: [
     BrowserModule,

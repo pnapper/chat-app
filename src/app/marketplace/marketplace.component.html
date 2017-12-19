@@ -8,7 +8,7 @@
   <option value="Jazz">Jazz</option>
 </select> -->
 
-<div *ngFor="let album of albums | async | genre:filterByGenre " class="panel panel-default">
+<div *ngFor="let album of albums | async" class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(album)"> <p>{{album.alias}}</p><strong><em>{{album.title}}</em></strong>
       </h3>
