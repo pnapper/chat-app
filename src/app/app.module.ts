@@ -5,15 +5,27 @@ import { HttpModule } from '@angular/http';
 
 import { routing } from './app.routing';
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
 
 import { MarketplaceComponent } from './marketplace/marketplace.component';
 
+=======
+// import { WelcomeComponent } from './welcome/welcome.component';
+
+// import { AboutComponent } from './about/about.component';
+// import { MarketplaceComponent } from './marketplace/marketplace.component';
+// import { AlbumDetailComponent } from './album-detail/album-detail.component';
+>>>>>>> master
 
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AdminComponent } from './admin/admin.component';
+<<<<<<< HEAD
+=======
+// import { EditAlbumComponent } from './edit-album/edit-album.component';
+>>>>>>> master
 // import { GenrePipe } from './genre.pipe';
 
 export const firebaseConfig = {
@@ -26,8 +38,18 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
     MarketplaceComponent,
     AdminComponent
+=======
+    // WelcomeComponent,
+    // AboutComponent,
+    // MarketplaceComponent,
+    // AlbumDetailComponent,
+    AdminComponent,
+    // EditAlbumComponent,
+    // GenrePipe
+>>>>>>> master
   ],
   imports: [
     BrowserModule,
